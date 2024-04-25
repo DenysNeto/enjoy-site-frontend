@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="./assets/custom/logo_LAST.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/customCss.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script defer src="assets/js/ui/mouse.js"></script>
+    <script src="./assets/js/ractive.js"></script>
+    <script defer src="./assets/js/ui/animations.js"></script>
+    <script src="./assets/js/data/translations.js"></script>
+    <script src="./assets/components/componentsRactive.js"></script>
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload landing">
+    <script id="template" type="text/ractive">
+
+                                          <div id="page-wrapper">
+                                      <header-c/>
+
+                                    <div id="main" class="wrapper style1">
+
+                  		<div class="container">
+       <button-back/>
+                  	<section id="content">
+             	<header class="major">
+      <br>
+             	<h2 class="textEmblema">{{translateFunc(page ,  0, @global.translationLanguage) }}</h2>
+
+             </header>
+               <p>{{translateFunc(page ,  1, @global.translationLanguage) }}</p>
+
+               <hr />
+
+               <h3 class="textEmblema" >{{translateFunc(page ,  2, @global.translationLanguage) }}</h3>
+
+               <p>{{translateFunc(page ,  3, @global.translationLanguage) }}</p>
+               <hr />
+               <h3 class="textEmblema" >{{translateFunc(page ,  4, @global.translationLanguage) }}</h3>
+
+               {{translateFunc(page ,  5, @global.translationLanguage) }}
+               <hr />
+
+               <h3 class="textEmblema" > {{translateFunc(page ,  6, @global.translationLanguage) }}</h3>
+              {{translateFunc(page ,  7, @global.translationLanguage) }}
+               <hr />
+               <h3 class="textEmblema" >{{translateFunc(page ,  8, @global.translationLanguage) }} </h3>
+             {{translateFunc(page ,  9, @global.translationLanguage) }}
+               <hr />
+               <h3 class="textEmblema" > {{translateFunc(page ,  10, @global.translationLanguage) }} </h3>
+               {{translateFunc(page ,  11, @global.translationLanguage) }}
+               <hr />
+
+
+               <blockquote>{{translateFunc(page ,  12, @global.translationLanguage) }}</blockquote>
+               <hr />
+                  </section>
+
+
+       			<ask-question></ask-question>
+
+                  		</div>
+
+
+                  	  </div>
+
+
+
+                               <hr />
+
+
+
+
+
+
+
+                         </div>
+
+
+
+
+                    <!-- Footer -->
+                                    	<footer-c/>
+    </script>
+
+    <script>
+      var ractive = new Ractive({
+        target: "body",
+        template: "#template",
+        data: { page: "spf_info.html" },
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

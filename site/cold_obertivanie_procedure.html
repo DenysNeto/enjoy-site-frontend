@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="./assets/custom/logo_LAST.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/customCss.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script defer src="assets/js/ui/mouse.js"></script>
+    <script src="./assets/js/ractive.js"></script>
+    <script defer src="./assets/js/ui/animations.js"></script>
+    <script src="./assets/js/data/translations.js"></script>
+    <script src="./assets/components/componentsRactive.js"></script>
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload landing">
+    <script id="template" type="text/ractive">
+
+                                    <div id="page-wrapper">
+                                                              <header-c/>
+
+
+
+
+                  												<div id="main" class="wrapper style1">
+
+
+           <div class="container">
+      <button-back/>
+         		<header class="major">
+
+
+         			<h2 class="textEmblema">{{translateFunc(page ,  0, @global.translationLanguage)}} </h2>
+         			<h3 class="textEmblema">{{translateFunc(page ,  1, @global.translationLanguage)}}</h3>
+
+         		</header>
+
+         		<!-- Content -->
+         		<section id="content">
+         			<p>{{translateFunc(page ,  19, @global.translationLanguage)}}</p>
+
+         			<hr />
+
+         			<div class="row">
+         				<div class="col-12">
+
+         						<header class="major">
+         							<h3 class="textEmblema" >{{translateFunc(page ,  2, @global.translationLanguage)}} </h3>
+         						</header>
+
+         						<ol class="alt">
+         							<li>{{translateFunc(page ,  3, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  4, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  5, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  6, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  7, @global.translationLanguage)}}</li>
+         						</ol>
+         				</div>
+
+         			</div>
+
+         			<hr />
+
+         				<div class="row">
+         					<div class="col-12">
+
+         						<header class="major">
+         							<h3 class="textEmblema">{{translateFunc(page ,  8, @global.translationLanguage)}}</h3>
+         						</header>
+         						<ol class="alt">
+         							<li>{{translateFunc(page ,  9, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  10, @global.translationLanguage)}}
+         							</li>
+         							<li>{{translateFunc(page ,  11, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  12, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  13, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  14, @global.translationLanguage)}}</li>
+
+         							<li>{{translateFunc(page ,  15, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  16, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  17, @global.translationLanguage)}}</li>
+         							<li>{{translateFunc(page ,  18, @global.translationLanguage)}}</li>
+         						</ol>
+         					</div>
+
+         				</div>
+
+         				<hr />
+
+
+
+
+         		</section>
+
+
+
+
+
+         <ask-question></ask-question>
+
+
+
+
+         </div>
+                                 </div>
+         	</div>
+
+
+
+
+                                            <!-- Footer -->
+                                                            	<footer-c/>
+    </script>
+
+    <script>
+      var ractive = new Ractive({
+        target: "body",
+        template: "#template",
+        data: {
+          page: "cold_obertivanie_procedure.html",
+        },
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

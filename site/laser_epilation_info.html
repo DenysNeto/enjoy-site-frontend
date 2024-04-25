@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="./assets/custom/logo_LAST.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/customCss.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script defer src="assets/js/ui/mouse.js"></script>
+    <script src="./assets/js/ractive.js"></script>
+    <script defer src="./assets/js/ui/animations.js"></script>
+    <script src="./assets/js/data/translations.js"></script>
+    <script src="./assets/components/componentsRactive.js"></script>
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload landing">
+    <script id="template" type="text/ractive">
+
+                              <div id="page-wrapper">
+                          <header-c/>
+
+                        <div id="main" class="wrapper style1">
+                          					<div class="container">
+        						<button-back/>
+                          						<header class="major">
+                          							<h2 class="textEmblema" >{{translateFunc(page ,  0, @global.translationLanguage)}}</h2>
+
+                          						</header>
+
+                          						<!-- Content -->
+                          							<section id="content">
+                          								<p>{{translateFunc(page ,  1, @global.translationLanguage)}}</p>
+
+                          												<hr />
+
+                          								<h3 class="textEmblema" >{{translateFunc(page ,  2, @global.translationLanguage)}}</h3>
+
+                          						{{translateFunc(page ,  3, @global.translationLanguage)}}
+                          									<hr />
+                          								<h3 class="textEmblema" >{{translateFunc(page ,  4, @global.translationLanguage)}} </h3>
+
+                          							{{translateFunc(page ,  5, @global.translationLanguage)}}
+                          								<hr />
+
+                          								<h3 class="textEmblema" >{{translateFunc(page ,  6, @global.translationLanguage)}} </h3>
+                          								{{translateFunc(page ,  7, @global.translationLanguage)}}
+                          								<hr />
+                          								<h3 class="textEmblema" >{{translateFunc(page ,  8, @global.translationLanguage)}} </h3>
+
+                          								{{translateFunc(page ,  9, @global.translationLanguage)}}
+                          											<hr />
+                          								<h3 class="textEmblema" > {{translateFunc(page ,  10, @global.translationLanguage)}} </h3>
+
+                          							{{translateFunc(page ,  11, @global.translationLanguage)}}
+                          								<hr />
+                          								<h3 class="textEmblema" > {{translateFunc(page ,  12, @global.translationLanguage)}} </h3>
+                          								{{translateFunc(page ,  13, @global.translationLanguage)}}
+
+                          						</section>
+                        	</div>
+
+
+                   <hr />
+
+               	<div class="container">
+                  				<section>
+                   					<header class="major">
+                   						<h2 class="textEmblema">	{{translateFunc(page ,  19, @global.translationLanguage)}}</h2>
+                   					</header>
+
+                   					<div class="table-wrapper">
+                   						<table>
+                   							<thead>
+                   								<tr>
+                   									<th></th>
+                   									<th></th>
+                   								</tr>
+                   							</thead>
+                   							<tbody>
+                   								<tr>
+                   									<td>	{{translateFunc(page ,  20, @global.translationLanguage)}}</td>
+                   									<td animation="animate__bounce" class="animate__animated animate__slower" ><strong style="color:red" ><strike>295 zl</strike></strong> &nbsp; 250zl</td>
+                   								</tr>
+                   								<tr>
+                   									<td>	{{translateFunc(page ,  22, @global.translationLanguage)}}</td>
+                   									<td animation="animate__bounce" class="animate__animated animate__slower" > <strong style="color:red"><strike>515 zl</strike></strong> &nbsp; 410 zl</td>
+                   								</tr>
+                   								<tr>
+                   									<td>	{{translateFunc(page ,  24, @global.translationLanguage)}}</td>
+                   									<td  animation="animate__bounce" class="animate__animated animate__slower " >  <strong style="color:red"><strike>610 zl</strike></strong> &nbsp; 460 zl</td>
+                   								</tr>
+                   							</tbody>
+                   						</table>
+                   					</div>
+
+                   				<button-c isPrimary='true' style="width: 100%;
+      margin-bottom: 1rem;"  classes="animate__animated animate__heartBeat  animate__slower"  />
+                   				</section>
+
+        		<ask-question></ask-question>
+               </div>
+
+
+             </div>
+
+
+
+             </div>
+        <!-- Footer -->
+                        	<footer-c/>
+    </script>
+
+    <script>
+      var ractive = new Ractive({
+        target: "body",
+        template: "#template",
+        data: { page: "laser_epilation_info.html" },
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

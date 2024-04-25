@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="./assets/custom/logo_LAST.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/customCss.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script defer src="assets/js/ui/mouse.js"></script>
+    <script src="./assets/js/ractive.js"></script>
+    <script defer src="./assets/js/ui/animations.js"></script>
+    <script src="./assets/js/data/translations.js"></script>
+    <script src="./assets/components/componentsRactive.js"></script>
+    <script src="./assets/js/data/courseLE.js"></script>
+  </head>
+  <body class="is-preload landing">
+    <script id="template" type="text/ractive">
+                                          <!-- Header -->
+                                             <header-c/>
+                                      <div id="page-wrapper">
+                                      		<section id="banner">
+                              			<div class="content">
+
+                              				<header  class="major">
+                          <img style="width:30vw" src="./assets/custom/photos/label_full.png" alt="" />
+                                   <h2 class="textEmblema" style="color: rgba(255, 223, 0, 0.8)"> {{translateFunc(page ,  0, @global.translationLanguage)}}</h2>
+                              				</header>
+      <div>
+        <h2 style="text-align:left" class="textEmblema" style="color: rgba(255, 223, 0, 0.8)"> {{translateFunc(page ,  1, @global.translationLanguage)}}  </h2>
+                                      <range-input value=500  name="rashod_1" label={{translateFunc(page ,  2, @global.translationLanguage)}} min=0 max=10000  />
+                                      <range-input value=500  name="rashod_2" label={{translateFunc(page ,  3, @global.translationLanguage)}} min=0 max=5000  />
+                                      <range-input value=500  name="rashod_3" label={{translateFunc(page ,  4, @global.translationLanguage)}} min=0 max=5000  />
+                                      <range-input value=500  name="rashod_4" label={{translateFunc(page ,  5, @global.translationLanguage)}} min=0 max=5000  />
+                                      <range-input value=500  name="rashod_5" label={{translateFunc(page ,  6, @global.translationLanguage)}} min=0 max=5000  />
+                                      <range-input value=500  name="rashod_6" label={{translateFunc(page ,  7, @global.translationLanguage)}} min=0 max=5000  />
+                                      <range-input value=500  name="rashod_7" label={{translateFunc(page ,  8, @global.translationLanguage)}} min=0 max=5000  />
+                                      <range-input value=500  name="rashod_8" label={{translateFunc(page ,  9, @global.translationLanguage)}} min=0 max=5000  />
+      </div>
+      <hr>
+
+
+      <div>
+                <h2 style="text-align:left" class="textEmblema" style="color: rgba(255, 223, 0, 0.8)"> {{translateFunc(page ,  10, @global.translationLanguage)}}</h2>
+                                      <range-input value=5 name="hours_per_day"  currency="no" label={{translateFunc(page ,  11, @global.translationLanguage)}} min=1 max=14  />
+                                      <range-input value=3 name="price"  currency="no" label={{translateFunc(page ,  12, @global.translationLanguage)}} min=0 max=50  />
+                                      <range-input value=5 name="daysInWeek"  currency="no" label={{translateFunc(page ,  13, @global.translationLanguage)}} min=0 max=7  />
+      </div>
+
+      <modal-template callback={{@.test}} label={{translateFunc(page ,  14, @global.translationLanguage)}} style="width:100%">
+        <section>
+          <div  style="display:flex;align-items:start;flex-direction:column;" class="container">
+            <div id="bla" style="display:flex;flex-direction: row;justify-content: end;align-items: flex-start;align-self: center;">
+                  <a style="border-bottom: none;" href="./index.html"><img  style="width:3rem" src="./assets/custom/logo_LAST.png" alt="" /></a>
+                  <h2  style="align-self:center; margin : 0">{{translateFunc(page ,  14 , @global.translationLanguage)}}</h2>
+            </div>
+            <div style="width:100%" id="section-to-print">
+
+             <table>
+                									<thead>
+                										<tr>
+                											<th></th>
+                											<th></th>
+                										</tr>
+                									</thead>
+                									<tbody>
+      				<tr>
+      		      <td style="font-weight:600;text-align: left;" >{{translateFunc(page ,  15, @global.translationLanguage)}} </td>
+      		      <td style="color:green;font-weight:600"  >{{resultat.invested}}  zl</td>
+      				</tr>
+               <tr>
+      		      <td style="font-weight:600;text-align: left;" >{{translateFunc(page ,  16, @global.translationLanguage)}} </td>
+      		      <td style="color:green;font-weight:600"  >{{resultat.income}}  zl</td>
+      				</tr>
+               <tr>
+      		      <td style="font-weight:600;text-align: left;" >{{translateFunc(page ,  17, @global.translationLanguage)}} </td>
+      		      <td style="color:green;font-weight:600"  >{{resultat.ocupaemost}} {{translateFunc(page ,  23, @global.translationLanguage)}} </td>
+      				</tr>
+               <tr>
+      		      <td style="font-weight:600;text-align: left;" >{{translateFunc(page ,  18, @global.translationLanguage)}}</td>
+      		      <td style="color:green;font-weight:600"  >{{resultat.income_per_year}} zl</td>
+      				</tr>
+               <tr>
+      		      <td style="font-weight:600;text-align: left;" >{{translateFunc(page ,  19, @global.translationLanguage)}} </td>
+      		      <td style="color:green;font-weight:600"  >{{resultat.income_without_arenda_month}} zl</td>
+      				</tr>
+               <tr>
+      		      <td style="font-weight:600;text-align: left;">{{translateFunc(page ,  20, @global.translationLanguage)}} </td>
+      		      <td style="color:green;font-weight:600"  >{{resultat.income_without_arenda_year}} zl</td>
+      				</tr>
+      													</tbody>
+                								</table>
+             </div>
+          </div>
+        </section>
+        <div class="row">
+            <div class="col-6 col-12-medium" id="print-btn" style="display:flex">
+                      <button-action action={{@global.print}} label={{translateFunc(page ,  21, @global.translationLanguage)}} style="width:100%" />
+             </div>
+              <div class="col-6 col-12-medium" id="bla" style="display:flex">
+                      <button-action action={{@global.closeModalTemplate}}  label={{translateFunc(page ,  22, @global.translationLanguage)}} style="width:100%" />
+            </div>
+        </div>
+      </modal-template>
+
+                              			</div>
+
+
+                              		</section>
+
+                                 <section  class="wrapper style2 special fade">
+                                    <div class="container">
+                                         <div>
+      </div>
+                                    </div>
+                                  </section>
+
+                                </div>
+
+                  <footer-c></footer-c>
+    </script>
+
+    <script>
+      var ractive = new Ractive({
+        target: "body",
+        template: "#template",
+        invested: function () {},
+        data: {
+          page: "calculator_ee.html",
+          courseLEProgram: window.courseLEProgram,
+          resultat: {
+            invested: 0,
+            income: 0,
+            ocupaemost: 0,
+            income_per_year: 0,
+            income_without_arenda: 0,
+            income_without_arenda_month: 0,
+            income_without_arenda_year: 0,
+          },
+        },
+        test() {
+          let rashod1 = +document.querySelector("[name=rashod_1]").value;
+          let rashod2 = +document.querySelector("[name=rashod_2]").value;
+          let rashod3 = +document.querySelector("[name=rashod_3]").value;
+          let rashod4 = +document.querySelector("[name=rashod_4]").value;
+          let rashod5 = +document.querySelector("[name=rashod_5]").value;
+          let rashod6 = +document.querySelector("[name=rashod_6]").value;
+          let rashod7 = +document.querySelector("[name=rashod_7]").value;
+          let arenda = +document.querySelector("[name=rashod_8]").value;
+
+          let hoursPerDay = +document.querySelector("[name=hours_per_day]")
+            .value;
+          let averagePriceMin = +document.querySelector("[name=price]").value;
+          let daysInWeek = +document.querySelector("[name=daysInWeek]").value;
+
+          let invested =
+            rashod1 +
+            rashod2 +
+            rashod3 +
+            rashod4 +
+            rashod5 +
+            rashod6 +
+            rashod7 +
+            arenda;
+          let income = hoursPerDay * daysInWeek * averagePriceMin * 60;
+          let ocupaemost = (invested - arenda) / income;
+          let ocupaemostArenda = (Math.ceil(ocupaemost) * arenda) / income;
+          ocupaemost = Math.ceil(ocupaemost) + Math.ceil(ocupaemostArenda);
+
+          let anualIncome =
+            hoursPerDay * daysInWeek * averagePriceMin * 60 * 12;
+          let incomeMinusArendaMonth =
+            hoursPerDay * daysInWeek * averagePriceMin * 60 - arenda;
+          let incomeMinusArendaYear = incomeMinusArendaMonth * 12;
+
+          this.set("resultat.invested", invested);
+          this.set("resultat.income", invested);
+          this.set("resultat.ocupaemost", ocupaemost);
+          this.set("resultat.income_per_year", invested);
+          this.set(
+            "resultat.income_without_arenda_month",
+            incomeMinusArendaMonth
+          );
+          this.set(
+            "resultat.income_without_arenda_year",
+            incomeMinusArendaYear
+          );
+        },
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="./assets/custom/logo_LAST.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/customCss.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script defer src="assets/js/ui/mouse.js"></script>
+    <script src="./assets/js/ractive.js"></script>
+    <script defer src="./assets/js/ui/animations.js"></script>
+    <script src="./assets/js/data/translations.js"></script>
+    <script src="./assets/components/componentsRactive.js"></script>
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload landing">
+    <script id="template" type="text/ractive">
+
+                                      <div id="page-wrapper">
+                                  <header-c/>
+
+                       <div id="main" class="wrapper style1">
+          			<div class="container">
+      <button-back/>
+          				<header class="major">
+          					<h2 class="textEmblema" >{{translateFunc(page ,  0, @global.translationLanguage)}}</h2>
+
+          				</header>
+
+          				<!-- Content -->
+          				<section id="content">
+          					<p>{{translateFunc(page ,  1, @global.translationLanguage)}}</p>
+
+          					<hr />
+
+          					<h3 class="textEmblema" >{{translateFunc(page ,  2, @global.translationLanguage)}}</h3>
+
+
+          				{{translateFunc(page ,  3, @global.translationLanguage)}}
+          					<hr />
+          					<h3 class="textEmblema">{{translateFunc(page ,  4, @global.translationLanguage)}} </h3>
+        {{translateFunc(page ,  5, @global.translationLanguage)}}
+          					<hr />
+
+          					<h3 class="textEmblema"> {{translateFunc(page ,  6, @global.translationLanguage)}} </h3>
+
+          {{translateFunc(page ,  7, @global.translationLanguage)}}
+          					<hr />
+          					<h3 class="textEmblema" >{{translateFunc(page ,  8, @global.translationLanguage)}} </h3>
+
+          			{{translateFunc(page ,  9, @global.translationLanguage)}}
+          					<hr />
+          					<h3 class="textEmblema" > {{translateFunc(page ,  10, @global.translationLanguage)}} </h3>
+
+          	{{translateFunc(page ,  11, @global.translationLanguage)}}
+          					<hr />
+          					<h3 class="textEmblema" > {{translateFunc(page ,  12, @global.translationLanguage)}} </h3>
+
+          		{{translateFunc(page ,  13, @global.translationLanguage)}}
+          					<hr />
+
+          				</section>
+
+
+         <ask-question></ask-question>
+
+          	<section id="three" class="spotlight style3 left">
+          		<span class="image fit main bottom"><img src="./assets/custom/photos/promotions/laser_OUR_2.jpg" alt="" /></span>
+          		<div class="content">
+          			<section>
+          				<header class="major">
+          					<h3>{{translateFunc(page ,  16, @global.translationLanguage)}}</h3>
+          					<p><strong>{{translateFunc(page ,  17, @global.translationLanguage)}}</strong></p>
+          				</header>
+          				<div class="table-wrapper">
+          					<table>
+          						<thead>
+          							<tr>
+
+          								<th></th>
+          								<th></th>
+          							</tr>
+          						</thead>
+          						<tbody>
+          							<tr>
+          								<td>5 {{translateFunc(page ,  18, @global.translationLanguage)}} </td>
+          								<td animation="animate__bounce"  class="animate__animated   animate__slower" ><strong style="color:red"><strike>600 zl </strike></strong>&nbsp; &nbsp; <strong class="textEmblema">540
+          										zl</strong></td>
+          							</tr>
+          							<tr>
+          								<td>10 {{translateFunc(page ,  18, @global.translationLanguage)}}</td>
+          								<td animation="animate__bounce"  class="animate__animated   animate__slower" > <strong style="color:red"><strike> 1200 zl </strike></strong> &nbsp; <strong class="textEmblema"> 1020 zl
+          									</strong> </td>
+          							</tr>
+          							<tr>
+
+          								<td> 15 {{translateFunc(page ,  18, @global.translationLanguage)}}</td>
+          								<td animation="animate__bounce"  class="animate__animated   animate__slower" ><strong style="color:red"><strike> 1800 zl </strike></strong>&nbsp; <strong class="textEmblema">1440
+          										zl</strong> </td>
+          							</tr>
+          						</tbody>
+
+          					</table>
+          				</div>
+
+          				<button-c style="width:100%" isPrimary='true'  classes="animate__animated animate__heartBeat  animate__slower"  />
+          		</div>
+
+          	</section>
+
+      <ask-question></ask-question>
+
+          		</div>
+
+
+
+
+
+
+
+
+
+          	</div>
+
+
+
+          	</div>
+                <!-- Footer -->
+                                	<footer-c/>
+    </script>
+
+    <script>
+      var ractive = new Ractive({
+        target: "body",
+        template: "#template",
+        data: {
+          page: "electro_epilation_info.html",
+        },
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

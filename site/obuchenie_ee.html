@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="./assets/custom/logo_LAST.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/customCss.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script defer src="assets/js/ui/mouse.js"></script>
+    <script src="./assets/js/ractive.js"></script>
+    <script defer src="./assets/js/ui/animations.js"></script>
+    <script src="./assets/js/data/translations.js"></script>
+    <script src="./assets/components/componentsRactive.js"></script>
+    <script src="./assets/js/data/courseEE.js"></script>
+  </head>
+  <body class="is-preload landing">
+    <script id="template" type="text/ractive">
+                                            <!-- Header -->
+                                               <header-c/>
+                                        <div id="page-wrapper">
+
+
+                                        		<section id="banner">
+                                			<div class="content">
+
+                                				<header  class="major">
+                            <img style="width:30vh;" src="./assets/custom/photos/label_full.png" alt="" />
+                                     <h2 class="textEmblema"  style="color: rgba(255, 223, 0, 0.8)">{{translateFunc(page ,  0, @global.translationLanguage) }}</h2>
+                                               <h3 class="textEmblema" >  {{translateFunc(page ,  33, @global.translationLanguage) }}  <div style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;"
+                    style="color: rgba(255, 223, 0, 0.8)"
+                > <img  style="width:4rem" src="./assets/custom/logo_LAST.png" alt="" />  ENJOY </div>{{translateFunc(page ,  32, @global.translationLanguage) }} <strong>2 {{translateFunc(page ,  31, @global.translationLanguage) }} </strong>!</h3>
+                                   <div id="promo-icons" style="display:flex;flex-direction:row;justify-content:space-around;padding:30px">
+                                           <image-c class="textEmblema" animation="animate__pulse" class="animate__animated "  imgClass="fas fa-magic" header={{translateFunc(page ,  2, @global.translationLanguage) }} content={{translateFunc(page ,  3, @global.translationLanguage) }} />
+                                           <image-c class="textEmblema" animation="animate__pulse" class="animate__animated  animate__delay-1s"  imgClass="fas fa-user-check" header={{translateFunc(page ,  4, @global.translationLanguage) }} content={{translateFunc(page ,  5, @global.translationLanguage) }} />
+                                           <image-c class="textEmblema" animation="animate__pulse" class="animate__animated  animate__delay-1s" imgClass="fas fa-hand-holding-usd" header={{translateFunc(page ,  6, @global.translationLanguage) }} content={{translateFunc(page ,  7, @global.translationLanguage) }} />
+                                           <image-c class="textEmblema" animation="animate__pulse" class="animate__animated  animate__delay-2s" imgClass="fas fa-handshake" header = {{translateFunc(page ,  8, @global.translationLanguage) }} content={{translateFunc(page ,  9, @global.translationLanguage) }}  />
+                                    </div>
+                                				</header>
+                                			</div>
+                                		</section>
+
+
+
+
+
+                <section  class="wrapper style2 special fade">
+                  <div class="container">
+                    <header>
+                      <h2>{{translateFunc(page ,  10, @global.translationLanguage) }} </h2>
+                    </header>
+                  </div>
+                </section>
+
+
+
+
+
+
+
+
+
+                 <section  class="wrapper style1  ">
+                   <div class="container">
+                     <section id="content">
+                           <list-c isChecked="no" header={{translateFunc(page ,  11, @global.translationLanguage) }} text=""  />
+                           <list-c header={{translateFunc(page ,  12, @global.translationLanguage) }} text=""  />
+                           <list-c header={{translateFunc(page ,  13, @global.translationLanguage) }} text=""  />
+                           <list-c header={{translateFunc(page ,  14, @global.translationLanguage) }} text=""  />
+                     </section>
+                    </div>
+                  </section>
+
+
+
+
+
+                 <section  class="wrapper style2 special fade">
+                   <div class="container">
+                     <header>
+                       <h2>{{translateFunc(page ,  15, @global.translationLanguage) }} </h2>
+                     </header>
+                   </div>
+                 </section>
+
+
+             <section  class="wrapper style1  ">
+                 <div class="container">
+                  <section id="content">
+                       <list-c header={{translateFunc(page ,  16, @global.translationLanguage) }} text={{translateFunc(page ,  17, @global.translationLanguage) }}  />
+                       <list-c header={{translateFunc(page ,  18, @global.translationLanguage) }} text={{translateFunc(page ,  19, @global.translationLanguage) }}  />
+                       <list-c header={{translateFunc(page ,  20, @global.translationLanguage) }} text={{translateFunc(page ,  21, @global.translationLanguage) }}  />
+                       <list-c header={{translateFunc(page ,  22, @global.translationLanguage) }} text={{translateFunc(page ,  23, @global.translationLanguage) }}  />
+                  </section>
+                    </div>
+
+
+
+
+
+
+
+
+                  </div>
+
+                     <section  class="wrapper style2 special fade">
+                     <div class="container">
+                       <header>
+                         <h2>{{translateFunc(page ,  24, @global.translationLanguage) }} </h2>
+                         <button-c style="width:100%"  classes="animate__animated animate__heartBeat  animate__slower animate__infinite " link="./calculator_ee.html" label={{translateFunc(page ,  34, @global.translationLanguage) }}/>
+
+                       </header>
+                     </div>
+                  </section>
+
+                  <section   class="wrapper"  >
+                      <header class="major">
+                                  <br>
+                       	<h2 class="textEmblema" >{{translateFunc(page ,  25, @global.translationLanguage) }}</h2>
+                       </header>
+                     <div class="container">
+                       <tabs-c items={{@global["courseEEProgram_" + @global.translationLanguage || "rus"]}} />
+                     </div>
+                  </section>
+
+
+                     <section  class="wrapper style2 special fade">
+                     <div class="container">
+                       <header>
+                         <h2>{{translateFunc(page ,  26, @global.translationLanguage) }} </h2>
+                         <p>{{translateFunc(page ,  27, @global.translationLanguage) }}</p>
+                         <button-c style="width:100%" classes="animate__animated animate__heartBeat  animate__slower animate__infinite" />
+
+                       </header>
+                     </div>
+                  </section>
+
+
+              <section class="wrapper"  >
+
+                     <div class="container">
+                      <div style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;"
+      >
+
+            <header class="major">
+                                  <br>
+                       	<h2 class="textEmblema"  >{{translateFunc(page ,  28, @global.translationLanguage) }}</h2>
+                       </header>
+
+
+                           <a style="max-width:300px" animation="animate__pulse"  class="animate__animated animate__slower animate__infinite"  href="#" class="image fit"
+                                               ><img src="/assets/custom/photos/promotions/diploma_ee.png" alt=""
+                                             /></a>
+
+
+
+
+
+                      </div>
+
+                     </div>
+
+
+                  </section>
+
+
+
+                  <section  class="wrapper style2 special fade">
+                     <div class="container">
+                       <header>
+                         <h2>{{translateFunc(page ,  29, @global.translationLanguage) }}</h2>
+                         <button-c  style="width:100%" link="obuchenie_le.html"  label={{translateFunc(page ,  30, @global.translationLanguage) }} classes="animate__animated animate__heartBeat  animate__slower animate__infinite" />
+
+                       </header>
+                     </div>
+                  </section>
+
+
+
+
+
+                    <footer-c></footer-c>
+    </script>
+
+    <script>
+      var ractive = new Ractive({
+        target: "body",
+        template: "#template",
+        data: {
+          courseLEProgram: window.courseEEProgram,
+          page: "obuchenie_ee.html",
+        },
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

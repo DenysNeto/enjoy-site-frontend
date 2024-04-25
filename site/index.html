@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="./assets/custom/logo_LAST.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/customCss.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script defer src="assets/js/ui/mouse.js"></script>
+    <script src="./assets/js/ractive.js"></script>
+    <script defer src="./assets/js/ui/animations.js"></script>
+    <script src="./assets/js/data/translations.js"></script>
+    <script src="./assets/components/componentsRactive.js"></script>
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload landing">
+    <script id="template" type="text/ractive">
+
+      <menu-c/>
+                        <header-c/>
+                                <div       id="page-wrapper">
+
+                                	<!-- Header -->
+
+
+                                	<!-- Main page -->
+                                		<section id="banner">
+                                			<div class="content">
+                                				<header  class="major">
+                     					  <img style="width:30vw" src="./assets/custom/photos/label_full.png" alt="" />
+                                				</header>
+                                				<span class="image"><img src="./assets/custom/photos/promotions/laser_OUR.jpg" alt="" /></span>
+                                			</div>
+
+                                		</section>
+
+                                	<!-- first page -->
+                                		<section id="one" class="spotlight style1 bottom">
+                                			<span class="image fit main"><img src="./assets/custom/photos/prices/bedra.jpg" alt="" /></span>
+                                			<div class="content">
+                                				<div class="container">
+                                					<div class="row">
+                                						<div class="col-12 col-12-medium">
+                                							<header>
+
+                                								<h2  >{{translateFunc(page ,  0 , @global.translationLanguage) }} </h2>
+                                							</header>
+
+                                									<h3 animation="animate__pulse"  class="animate__animated animate__slower textEmblema"  style="color:green;font-weight:600">✔ {{translateFunc(page ,  1 , @global.translationLanguage) }}</h3>
+                                									<h3 animation="animate__pulse"  class="animate__animated animate__slower animate__delay-1s textEmblema"   style="color:green;font-weight:600">✔ {{translateFunc(page ,  2 , @global.translationLanguage) }}</h3>
+                                									<h3 animation="animate__pulse"  class="animate__animated animate__slower animate__delay-1s textEmblema" style="color:green;font-weight:600">✔ {{translateFunc(page ,  3 , @global.translationLanguage) }}</h3>
+                                									<h3 animation="animate__pulse"  class="animate__animated animate__slower animate__delay-2s textEmblema" style="color:green;font-weight:600">✔ {{translateFunc(page ,  4 , @global.translationLanguage) }}</h3>
+                                						</div>
+                                					</div>
+                                				</div>
+                                			</div>
+                                		</section>
+
+
+
+                                	<!-- About us -->
+                                		<section id="two" class="spotlight style2 right">
+                                			<span class="image fit main"><img src="./assets/custom/photos/prices/nogi.jpg" alt="" /></span>
+                                			<div class="content">
+                                				<header>
+                                					<h2 class="textEmblema">{{translateFunc(page ,  61 , @global.translationLanguage) }}</h2>
+                                					<h3 >{{translateFunc(page ,  62 , @global.translationLanguage) }}</h3>
+                                				</header>
+                                				<div animation="animate__pulse"  class="animate__animated animate__slower animate__delay-1s textEmblema" > <strong class="textEmblema" style="color:green;font-weight:600">{{translateFunc(page ,  63 , @global.translationLanguage) }}  </div>
+                                				<div animation="animate__pulse"  class="animate__animated animate__slower animate__delay-1s textEmblema" > <strong class="textEmblema" style="color:green;font-weight:600">{{translateFunc(page ,  64 , @global.translationLanguage) }}</div>
+                                				<div animation="animate__pulse"  class="animate__animated animate__slower animate__delay-1s textEmblema" >  <strong class="textEmblema"  style="color:green;font-weight:600">{{translateFunc(page ,  65 , @global.translationLanguage) }}</div>
+                                				<div animation="animate__pulse"  class="animate__animated animate__slower animate__delay-1s textEmblema" ><strong class="textEmblema"  style="color:green;font-weight:600">{{translateFunc(page ,  66 , @global.translationLanguage) }}</div>
+                                			</div>
+
+                                		</section>
+
+                                	<!-- Prices laser -->
+                                		<section id="three" class="spotlight style3 left">
+                                			<span class="image fit main bottom"><img src="./assets/custom/photos/promotions/laser_OUR_2.jpg" alt="" /></span>
+                                			<div class="content">
+                                						<section>
+                                								<header class="major">
+                                									<h2 class="textEmblema" >{{translateFunc(page ,  20 , @global.translationLanguage) }}</h2>
+                                								</header>
+
+                                							<div class="table-wrapper">
+                                								<table>
+                                									<thead>
+                                										<tr>
+
+                                											<th></th>
+                                											<th></th>
+                                										</tr>
+                                									</thead>
+                                									<tbody>
+                     					<tr animation="animate__bounce" class="animate__animated animate__slower">
+                     			<td style="font-weight: 400" >{{translateFunc(page ,  8 , @global.translationLanguage) }}</td>
+                     			<td  class="textEmblema" style="color:green;font-weight:600"  >185 zl</td>
+                     					</tr>
+                     					<tr animation="animate__bounce" class="animate__animated animate__slower">
+                     			<td style="font-weight: 400" >{{translateFunc(page ,  10 , @global.translationLanguage) }}</td>
+                     			<td  class="textEmblema" style="color:green;font-weight:600">315 zl</td>
+                     					</tr>
+                     				<tr animation="animate__bounce" class="animate__animated animate__slower">
+                     						<td style="font-weight: 400" >{{translateFunc(page ,  12 , @global.translationLanguage) }}</td>
+                     						<td class="textEmblema"  style="color:green;font-weight:600">190 zl</td>
+                     					</tr>
+                     				<tr animation="animate__bounce" class="animate__animated animate__slower">
+                     						<td style="font-weight: 400" >{{translateFunc(page ,  14 , @global.translationLanguage) }}</td>
+                     						<td class="textEmblema"  style="color:green;font-weight:600">220 zl</td>
+                     					</tr>
+                     				<tr animation="animate__bounce" class="animate__animated animate__slower">
+                     						<td style="font-weight: 400" >{{translateFunc(page ,  16 , @global.translationLanguage) }}</td>
+                     						<td class="textEmblema"  style="color:green;font-weight:600">155 zl</td>
+                     					</tr>
+                     			<tr animation="animate__bounce" class="animate__animated animate__slower">
+                     						<td style="font-weight: 400" >{{translateFunc(page ,  18, @global.translationLanguage) }}</td>
+                     						<td class="textEmblema"  style="color:green;font-weight:600">135 zl</td>
+                     					</tr>
+                     														</tbody>
+                                								</table>
+                                							</div>
+
+
+                                				<ul class="actions">
+                                					<li class="textEmblema" ><a href="laser_epilation_info.html" class="button">{{translateFunc(page ,  21 , @global.translationLanguage) }}</a></li>
+                                					<li><button-c isPrimary='true'  classes="animate__animated animate__heartBeat  animate__slower"  /></li>
+                                				</ul>
+                                			</div>
+                                		</section>
+
+
+
+                                		<!-- Prices Electroepilation -->
+                                				<section id="three" class="spotlight style3 right">
+                                			<span class="image fit main bottom"><img src="./assets/custom/photos/promotions/laser_OUR_2.jpg" alt="" /></span>
+                                			<div class="content">
+                                						<section>
+                                							<header class="major">
+                                								<h2 class="textEmblema">{{translateFunc(page ,  22 , @global.translationLanguage) }}</h2>
+                                								<h3 class="textEmblema">1 {{translateFunc(page ,  23 , @global.translationLanguage) }} - 120zl</h3>
+                                							</header>
+                                							<div class="table-wrapper">
+                                								<table>
+                                									<thead>
+                                										<tr>
+                                											<th></th>
+                                											<th></th>
+                                										</tr>
+                                									</thead>
+                                									<tbody>
+                                										<tr >
+                                											<td style="font-weight: 400" >5 {{translateFunc(page ,  24 , @global.translationLanguage) }}</td>
+                                											<td  animation="animate__bounce"  class="animate__animated   animate__slower" ><strong style="color:red"><strike>600 zl </strike></strong>&nbsp; &nbsp; <strong class="textEmblema"  >540 zl</strong></td>
+                                										</tr>
+                                										<tr>
+                                											<td style="font-weight: 400">10 {{translateFunc(page ,  24, @global.translationLanguage) }}</td>
+                                											<td animation="animate__bounce"  class="animate__animated animate__bounce  animate__slower"> <strong style="color:red"><strike> 1200 zl </strike></strong> &nbsp; <strong class="textEmblema"> 1020 zl </strong> </td>
+                                										</tr>
+                                										<tr>
+
+                                											<td style="font-weight: 400" > 15 {{translateFunc(page ,  24 , @global.translationLanguage) }}</td>
+                                											<td animation="animate__bounce" ><strong style="color:red"><strike> 1800 zl </strike></strong>&nbsp; <strong class="textEmblema">1440 zl</strong> </td>
+                                										</tr>
+                                									</tbody>
+
+                                								</table>
+                                							</div>
+
+                                								<ul class="actions">
+                                									<li class="textEmblema" ><a href="electro_epilation_info.html" class="button">{{translateFunc(page ,  21 , @global.translationLanguage) }}</a></li>
+                                									<li><button-c isPrimary='true'  classes="animate__animated   animate__slower"   /></li>
+                                								</ul>
+                                			</div>
+                                		</section>
+
+                              <!-- OUR PRODUCSIA -->
+
+
+
+                              	<section id="one" class="spotlight style1 bottom">
+                                			<span class="image fit main"><img src="assets/custom/photos/cosmetics/promotion_2.jpg" alt="" /></span>
+                                			<div class="content">
+                                				<div class="container">
+                                						<div >
+                                							<header>
+                                								<h2 class="textEmblema" style="text-align: center;">{{translateFunc(page ,  30 , @global.translationLanguage) }}</h2>
+                                							</header>
+                                						 <p>{{translateFunc(page ,  31 , @global.translationLanguage) }}</p>
+                               					 <p>{{translateFunc(page ,  32 , @global.translationLanguage) }}</p>
+                                						</div>
+
+                              	<div class="textEmblema" style="width:100%">
+                              		<button-c link="production.html" style="width:100%"  label={{translateFunc(page ,  33 , @global.translationLanguage) }}   />
+                              	</div>
+                                				</div>
+
+                                			</div>
+
+
+                                		</section>
+
+
+
+                     <!-- Obuchenie -->
+            <hr>
+
+                     		<div id="main" class="wrapper style1">
+                     	<div class="container">
+                     		<header class="major">
+                     			<h2 class="textEmblema" >{{translateFunc(page ,  35 , @global.translationLanguage) }}</h2>
+                     			<p>{{translateFunc(page ,  36 , @global.translationLanguage) }} </p>
+                     		</header>
+                     		<div class="row gtr-150">
+                     			<div class="col-6 col-12-medium">
+
+                     				<!-- Sidebar -->
+
+                     	<h2 class="textEmblema" >{{translateFunc(page ,  37 , @global.translationLanguage) }} <br> <span style="opacity : 0"> aaaaa</span> </h2>
+                     						<a href="#" class="image fit"><img src="/assets/custom/photos/promotions/diploma_le.png" alt="" /></a>
+                     						<h3 class="textEmblema" >{{translateFunc(page ,  38 , @global.translationLanguage) }}</h3>
+                     						<hr>
+                     	<ul style="height:70vh">
+                     							<li>{{translateFunc(page ,  39 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  40 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  41 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  42 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  43 , @global.translationLanguage) }}</li>
+                     						</ul>
+                 		<hr>
+                     	<ul  class="actions">
+                     		<li style="width:100%"  class="textEmblema" ><a style="width:inherit"  href="obuchenie_ee.html" class="button">{{translateFunc(page ,  21 , @global.translationLanguage) }}</a></li>
+                     	</ul>
+
+
+                     			</div>
+                     			<div class="col-6 col-12-medium imp-medium">
+
+                     				<!-- Content -->
+                     					<section id="content">
+                     	<h2 class="textEmblema" >{{translateFunc(page ,  44 , @global.translationLanguage) }}</h2>
+                     						<a href="#" class="image fit"><img src="/assets/custom/photos/promotions/diploma_ee.png" alt="" /></a>
+                     	<h3 class="textEmblema">{{translateFunc(page ,  45 , @global.translationLanguage) }}</h3>
+                 <hr>
+                     						<ul style="height:70vh">
+                     							<li>{{translateFunc(page ,  46 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  47 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  48 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  49 , @global.translationLanguage) }}</li>
+                     							<li>{{translateFunc(page ,  50 , @global.translationLanguage) }}</li>
+                     						</ul>
+                 		<hr>
+                     		<ul class="actions">
+                     			<li style="width:100%" class="textEmblema" ><a style="width:inherit" href="obuchenie_le.html" class="button">{{translateFunc(page ,  21 , @global.translationLanguage) }}</a></li>
+                                				</ul>
+                     					</section>
+                     			</div>
+                     		</div>
+                     	</div>
+                     </div>
+
+
+
+
+
+                      <section  class="wrapper style2 special fade">
+                                    <div class="container">
+                                      <header>
+                                        <h2> {{translateFunc(page ,  51, @global.translationLanguage) }} </h2>
+                                        <h4>{{translateFunc(page ,  52, @global.translationLanguage) }}</h4>
+                                         <button-c style="width:100%"   link="obuchenie_ee.html"  label={{translateFunc(page ,  51, @global.translationLanguage) }} classes="animate__animated animate__heartBeat  animate__slower animate__infinite" />
+                                      </header>
+
+                                    </div>
+                                 </section>
+
+                                	<!-- Specialnie paketnie predlogenia -->
+                                		<section id="four" class="wrapper style1 special fade-up">
+                                			<div class="container">
+                                				<header class="major">
+                                					<h2>{{translateFunc(page ,  53, @global.translationLanguage) }}</h2>
+                                					<p>{{translateFunc(page ,  54, @global.translationLanguage) }}</p>
+                                				</header>
+                                				<section id="timeline">
+                                					<div animation="animate__flipInY"  class="tl-item animate__animated animate__slower ">
+                                						<div class="tl-bg" style="background-image: url(./assets/custom/photos/prices/specialnoe_predlozhenie_1.jpg)"></div>
+                                						<div class="tl-year">
+                                							<p class=" heading--sanSerif" >1</p>
+                                						</div>
+
+                                						<div class="tl-content">
+                                							<h1>  <header class="major textEmblema"> {{translateFunc(page ,  55, @global.translationLanguage) }} <br> +  <br>  {{translateFunc(page ,  56, @global.translationLanguage) }} <br> <br>  220 zl </header>   </h1>
+                                						</div>
+                                					</div>
+
+                                					<div animation="animate__flipInY"  class="tl-item animate__animated animate__slower ">
+                                						<div class="tl-bg" style="background-image: url(./assets/custom/photos/prices/specialnoe_predlozhenie_2.jpg)"></div>
+                                						<div class="tl-year">
+                                							<p  class="f2 heading--sanSerif ">2</p>
+                                						</div>
+
+                                						<div class="tl-content">
+                                							<h1  ><header class="major textEmblema"> {{translateFunc(page ,  55, @global.translationLanguage) }} <br> + <br>  {{translateFunc(page ,  56, @global.translationLanguage) }} <br> +   <br> {{translateFunc(page ,  60, @global.translationLanguage) }} <br>   <br> 410 zl </header>   </h1>
+                                						</div>
+                                					</div>
+
+                                					<div animation="animate__flipInY"  class="tl-item animate__animated animate__slower ">
+                                						<div class="tl-bg" style="background-image: url(./assets/custom/photos/prices/specialnoe_predlozhenie_3.jpg)"></div>
+                                						<div class="tl-year">
+                                							<p class="f2 heading--sanSerif">3</p>
+                                						</div>
+                                						<div class="tl-content">
+                                							<h1 class="f3 text--accent ttu textEmblema"> <header class="major textEmblema"> {{translateFunc(page ,  55, @global.translationLanguage) }} <br> + <br>  {{translateFunc(page ,  56, @global.translationLanguage) }} <br> + <br> {{translateFunc(page ,  57, @global.translationLanguage) }} <br> <br> 460 zl </header>
+                                							</h1>
+                                						</div>
+                                					</div>
+                                				</section>
+                                				<footer class="major">
+                                					<div style="width:100%">
+                              							<button-c  classes="textEmblema" link="laser_epilation_info.html" style="width:100%"  label={{translateFunc(page ,  661, @global.translationLanguage) }}   />
+                              						</div>
+                                				</footer>
+                                			</div>
+                                		</section>
+
+                                	<!-- FAQ -->
+                                		<section id="five" class="wrapper style2 special fade">
+                                			<div class="container">
+                                				<header>
+                                					<h2>{{translateFunc(page ,  67, @global.translationLanguage) }}</h2>
+
+                                				</header>
+              <button-c  link="faq_procedure_le.html" style="width:100%"  label={{translateFunc(page ,  58, @global.translationLanguage) }}   />
+              <button-c  link="faq_procedure_ee.html" style="width:100%"  label={{translateFunc(page ,  59, @global.translationLanguage) }}  />
+
+                                			</div>
+                                		</section>
+
+                                	<!-- Footer -->
+                                	<footer-c/>
+
+                     </div>
+    </script>
+
+    <script>
+      var ractive = new Ractive({
+        target: "body",
+        template: "#template",
+        data: { page: "index.html" },
+        oncomplete() {
+          console.log("FINISHED");
+        },
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDKHEUB_4b8LKU61Q7y_QySpFyfKCS0KP0",
+        authDomain: "enjoy-735f8.firebaseapp.com",
+        projectId: "enjoy-735f8",
+        storageBucket: "enjoy-735f8.appspot.com",
+        messagingSenderId: "249168852161",
+        appId: "1:249168852161:web:40c10d471c8e7a3aed1040",
+        measurementId: "G-4CZKLDH7RW",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>
