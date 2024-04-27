@@ -18,7 +18,7 @@ Ractive.defaults.data = {
 Ractive.components["button-c"] = Ractive.extend({
   template: `
          
-		<a   href="{{link}}" style={{style}} class="  animate__slower button {{classes}} {{isPrimary ? 'primary' : ''}} ">{{label || translateFunc('general' ,  1 , @global.translationLanguage) }}</a>
+		<a  on-click="@.btnClick(@event)"  href="{{link}}" style={{style}} class="  animate__slower button {{classes}} {{isPrimary ? 'primary' : ''}} ">{{label || translateFunc('general' ,  1 , @global.translationLanguage) }}</a>
 `,
   data: {
     fields: [
@@ -30,6 +30,14 @@ Ractive.components["button-c"] = Ractive.extend({
       },
     ],
   },
+
+  btnClick(event) {
+    if (this.get("callback")) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      this.get("callback")();
+    }
+  },
 });
 
 Ractive.components["menu-c"] = Ractive.extend({
@@ -39,12 +47,13 @@ Ractive.components["menu-c"] = Ractive.extend({
     position: fixed;
     /* height: 50px; */
     z-index: 10000000;
-    background: white;
+    background: transparent;
     right: 2rem;
     bottom: 2rem;
-    padding: 25px;
-    border: 2px solid black;
-    border-radius: 76px;"><i class="textEmblema" style="font-size: 5rem" class="fas fa-comment"></i> </div>
+    padding: 20px;
+    border: 1px solid gold;
+    box-shadow: 0 10px 16px 0 goldenrod, 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    border-radius: 76px;"><i class="textEmblema" style="font-size: 3rem" class="fas fa-comment"></i> </div>
 
                 <modal isOpenBtnVisible=false closeCallback={{@.closeModalCallback}} label={{translateFunc('general' ,  30, @global.translationLanguage)}}>
                {{#if isDone}}
@@ -108,7 +117,7 @@ Ractive.components["ask-question-mobile"] = Ractive.extend({
 Ractive.components["ask-question"] = Ractive.extend({
   template: ` 
   
-        <section style="height:50vh" class="spotlight style3 right">
+        <section style="height:60vh" class="spotlight style3 right">
       		<span class="image fit main bottom"><img
       				src="./assets/custom/photos/other/question-mark-1872665_1280.jpg" alt="" /></span>
       		<div class="content">
@@ -315,7 +324,7 @@ Ractive.components["modal-template"] = Ractive.extend({
     background: #272833;
     border: 1px solid;
     max-height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     
 }
 .close-button {
@@ -344,6 +353,9 @@ Ractive.components["modal-template"] = Ractive.extend({
     this.set("isVissible", true);
     let modals = this.findAll(".modal-template");
     modals.forEach((modal) => window.document.body.appendChild(modal));
+    if (this.get("callback")) {
+      this.get("callback")();
+    }
   },
 
   closeBtnClick(event) {
@@ -441,7 +453,7 @@ Ractive.components["modal"] = Ractive.extend({
     background: #272833;
     border: 1px solid;
     max-height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 50px;
 }
 .close-button {
@@ -1115,7 +1127,7 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
 Ractive.components["header-c"] = Ractive.extend({
   template: `   
 
-
+<menu-c/>
   <nav-touch-c/>
  
 		<header style="display:flex;align-items:flex-start;justify-content: center" id="header">
@@ -1226,17 +1238,27 @@ Ractive.components["header-c"] = Ractive.extend({
 `,
   onrender: function () {
     if (!window.translationLanguage) {
-      const language = localStorage.getItem("language");
+      let language = localStorage.getItem("language");
+      let isSetLanguage = true;
       if (language) {
-        window.translationLanguage = language;
+        isSetLanguage = false;
       } else {
-        window.translationLanguage =
-          window.navigator.language || window.navigator.userLanguage;
-        localStorage.setItem(
-          "language",
-          window.navigator.language || window.navigator.userLanguage
-        );
+        language = window.navigator.language || window.navigator.userLanguage;
       }
+      if (language.includes("uk")) {
+        language = "ukr";
+      } else if (language.includes("pl") || language.includes("pol")) {
+        language = "pol";
+      } else if (language.includes("ru")) {
+        language = "rus";
+      } else if (language.includes("en")) {
+        language = "eng";
+      }
+
+      if (isSetLanguage) {
+        localStorage.setItem("language", language);
+      }
+      window.translationLanguage = language;
 
       this.update("@global.translationLanguage");
     }

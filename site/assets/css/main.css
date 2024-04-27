@@ -3239,7 +3239,7 @@ input[type="button"]:disabled,
 .spotlight.left .content,
 .spotlight.right .content {
   height: 101%;
-  padding: 6em 3em;
+  padding: 5em 3em;
   top: 0;
   width: 28em;
 }
@@ -4599,4 +4599,8 @@ select {
   #print-btn {
     display: none !important;
   }
+}
+
+#menu-btn:hover {
+  background: transparent !important;
 }

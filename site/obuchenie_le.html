@@ -8,10 +8,10 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/customCss.css" />
-    <link rel="stylesheet" href="assets/css/animation.css" />
-    <script defer src="assets/js/ui/mouse.js"></script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/customCss.css" />
+    <link rel="stylesheet" href="./assets/css/animation.css" />
+    <script defer src="./assets/js/ui/mouse.js"></script>
     <script src="./assets/js/ractive.js"></script>
     <script defer src="./assets/js/ui/animations.js"></script>
     <script src="./assets/js/data/translations.js"></script>
@@ -31,7 +31,7 @@
                                 				<header  class="major">
                             <img style="width:30vh" src="./assets/custom/photos/label_full.png" alt="" />
                                      <h2 class="textEmblema"  style="color: rgba(255, 223, 0, 0.8)">{{translateFunc(page ,  0, @global.translationLanguage) }}</h2>
-                                               <h3 class="textEmblema" >  {{translateFunc(page ,  33, @global.translationLanguage) }} <div style="
+                                               <h3 class="textEmblema" >  {{translateFunc(page ,  33, @global.translationLanguage) }} ENJOY <div style="
                     display: flex;
                     justify-content: center;
                     align-items: center;"
@@ -86,7 +86,7 @@
                        <header>
                          <h2> {{translateFunc(page ,  22, @global.translationLanguage) }} <br>  </h2>
                          <h4>{{translateFunc(page ,  23, @global.translationLanguage) }}</h4>
-                          <button-c style="width:100%" link="obuchenie_ee.html"  label={{translateFunc(page ,  36, @global.translationLanguage) }} classes="animate__animated animate__heartBeat  animate__slower animate__infinite" />
+                          <button-c callback={{@.openModal}} style="width:100%" link="obuchenie_ee.html"  label={{translateFunc(page ,  36, @global.translationLanguage) }} classes="animate__animated animate__heartBeat  animate__slower animate__infinite" />
                        </header>
                      </div>
                   </section>
@@ -106,7 +106,7 @@
                        <header>
                          <h2>{{translateFunc(page ,  38, @global.translationLanguage) }} </h2>
                          <p>{{translateFunc(page ,  39, @global.translationLanguage) }}</p>
-                         <button-c style="width:100%" classes="animate__animated animate__heartBeat  animate__slower animate__infinite" />
+                         <button-c  callback={{@.openModal}}  style="width:100%" classes="animate__animated animate__heartBeat  animate__slower animate__infinite" />
 
                        </header>
                      </div>
@@ -131,7 +131,7 @@
 
 
                            <a style="max-width:300px" animation="animate__pulse"  class="animate__animated animate__slower animate__infinite"  href="#" class="image fit"
-                                               ><img src="/assets/custom/photos/promotions/diploma_le.png" alt=""
+                                               ><img src="./assets/custom/photos/promotions/diploma_le.png" alt=""
                                              /></a>
                       </div>
                      </div>
@@ -157,17 +157,20 @@
           courseLEProgram: window.courseLEProgram,
           page: "obuchenie_le.html",
         },
+        openModal: function () {
+          window.toggleModal();
+        },
       });
     </script>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.scrolly.min.js"></script>
+    <script src="./assets/js/jquery.dropotron.min.js"></script>
+    <script src="./assets/js/jquery.scrollex.min.js"></script>
+    <script src="./assets/js/browser.min.js"></script>
+    <script src="./assets/js/breakpoints.min.js"></script>
+    <script src="./assets/js/util.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
