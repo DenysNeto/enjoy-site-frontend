@@ -196,7 +196,7 @@ Ractive.components["button-action"] = Ractive.extend({
 });
 
 Ractive.components["communication-form"] = Ractive.extend({
-  template: `<form style="padding:10px" id="myForm"  action="http://localhost:8000/submit" >
+  template: `<form style="padding:10px" id="myForm"  action="https://enjoy-site-backend-production.up.railway.app/submit" >
         <div class="">
           <div style="padding-bottom: 10px;">
           <label class="textEmblema" >{{translateFunc('general' ,  101, @global.translationLanguage)}}</label>
@@ -801,7 +801,7 @@ Ractive.components["brands-c"] = Ractive.extend({
 
   generateWhatsapp() {
     // Specify the phone number and message (optional)
-    var phoneNumber = "+48790213083";
+    var phoneNumber = "+48792437583";
     var message = "";
 
     // Generate the WhatsApp link
@@ -824,7 +824,7 @@ Ractive.components["brands-c"] = Ractive.extend({
 
   generateTelegram() {
     // Specify the username or phone number (with country code) and message (optional)
-    var usernameOrPhone = "+48790213083"; // Replace with the actual username or phone number
+    var usernameOrPhone = "+48792437583"; // Replace with the actual username or phone number
     var message = "";
 
     // Generate the Telegram link
@@ -927,7 +927,8 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
        class="link depth-0"
        href="index.html"
        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
-       <span class="indent-0"></span>{{translateFunc('general' ,  31, @global.translationLanguage)}}
+   
+       <span class="indent-0"></span> {{translateFunc('general' ,  31, @global.translationLanguage)}}
      </a>
      <a
        class="link depth-0"
@@ -937,9 +938,10 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
      </a>
      <a
      href="#"
+     on-click="@.noClick(@event)"
        class="link depth-0"
        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
-       <span class="indent-0"></span>{{translateFunc('general' , 11, @global.translationLanguage)}}
+       <span class="indent-0"></span> {{translateFunc('general' , 11, @global.translationLanguage)}}
      </a>
      <a
        class="link depth-1"
@@ -956,6 +958,7 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
      <a
        class="link depth-0"
        href="#"
+       on-click="@.noClick(@event)"
        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
        <span class="indent-0"></span>{{translateFunc('general' ,  4, @global.translationLanguage)}}
      </a>
@@ -974,6 +977,7 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
      <a
        class="link depth-0"
        href="#"
+       on-click="@.noClick(@event)"
        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
        <span class="indent-0"></span>{{translateFunc('general' ,  5, @global.translationLanguage)}}
      </a>
@@ -1040,6 +1044,7 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
      <a
        class="link depth-0"
        href="#"
+       on-click="@.noClick(@event)"
        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
        <span class="indent-0"></span>{{translateFunc('general' ,  6, @global.translationLanguage)}} | {{@global.translationLanguage}}
      </a>
@@ -1075,6 +1080,10 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
  </div>
  {{/if}}
  `,
+  noClick(event) {
+    event.stopImmediatePropagation();
+    event.preventDefault();
+  },
 
   clickOpenForm(event) {
     event.stopImmediatePropagation();

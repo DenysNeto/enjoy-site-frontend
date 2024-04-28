@@ -3630,7 +3630,7 @@ video {
 #banner {
   background-attachment: fixed;
   background-color: #272833;
-  background-image: url("/assets/custom/photos/first_block.jpg");
+  background-image: url("./assets/custom/photos/first_block.jpg");
   background-position: center center;
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -4603,4 +4603,13 @@ select {
 
 #menu-btn:hover {
   background: transparent !important;
+}
+
+ol {
+  text-align: left;
+}
+
+li.textEmblema {
+  color: rgba(255, 223, 0, 0.8) !important;
+  -webkit-text-fill-color: unset !important;
 }

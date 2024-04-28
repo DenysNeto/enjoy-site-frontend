@@ -1398,7 +1398,6 @@ window.translate = {
       32: "и начни зарабатывать уже через",
       33: "Пройди курс от",
       34: "Pасчитать",
-
       2: "БЕСЦЕННЫЕ ЗНАНИЯ",
       3: "Основные навыки самых эффективных лазерных технологий",
       4: "ПРОФЕССИОНАЛИЗМ",
@@ -1430,6 +1429,10 @@ window.translate = {
       30: "Узнать",
     },
     pol: {
+      31: "tygodnie",
+      32: "i zacznij zarabiać już w ciągu",
+      33: "Przejdź kurs od",
+      34: "Obliczyć",
       0: "Stań się elektrologiem!",
       1: "Przejdź kurs od ENJOY i zacznij zarabiać już za 2 tygodnie!",
       2: "BEZCENNE ZNAJOMOŚCI",
@@ -1463,6 +1466,10 @@ window.translate = {
       30: "Dowiedz się więcej",
     },
     eng: {
+      31: "weeks",
+      32: "and start earning in just",
+      33: "Take the course from",
+      34: "Calculate",
       0: "Become an electrologist!",
       1: "Take a course from ENJOY and start earning in just 2 weeks!",
       2: "INVALUABLE KNOWLEDGE",
@@ -1496,6 +1503,10 @@ window.translate = {
       30: "Learn more",
     },
     ukr: {
+      31: "тижні",
+      32: "і почни заробляти вже через",
+      33: "Пройди курс від",
+      34: "Розрахувати",
       0: "Стань електрологом!",
       1: "Пройди курс від ENJOY і почни заробляти вже через 2 тижні!",
       2: "НЕОЦІНЕННІ ЗНАННЯ",
