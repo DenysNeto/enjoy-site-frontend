@@ -4459,7 +4459,7 @@ body.is-touch #banner {
 }
 
 .textEmblema {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     #a27637 0%,
     10.309278219938278%,
@@ -4488,7 +4488,8 @@ body.is-touch #banner {
     #bb9c59 72.85223603248596%,
     86.42611801624298%,
     #eee393 100%
-  );
+  ); */
+  color: rgba(255, 223, 0, 0.8) !important;
 }
 
 .faq-question {
@@ -4598,6 +4599,10 @@ select {
   }
   #print-btn {
     display: none !important;
+  }
+
+  #ask-question-section {
+    display: none;
   }
 }
 

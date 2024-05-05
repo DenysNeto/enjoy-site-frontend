@@ -11,7 +11,23 @@ Ractive.defaults.data = {
     } else if (currLanguage.includes("en")) {
       translationLanguage = "eng";
     }
-    return window.translate[page][translationLanguage][index];
+
+    function truncateString(str, maxLength) {
+      if (str.length > maxLength) {
+        return str.slice(0, maxLength - 3) + "...";
+      } else {
+        return str;
+      }
+    }
+
+    if (page == "general") {
+      return truncateString(
+        window.translate[page][translationLanguage][index],
+        30
+      );
+    } else {
+      return window.translate[page][translationLanguage][index];
+    }
   },
 };
 
@@ -117,7 +133,7 @@ Ractive.components["ask-question-mobile"] = Ractive.extend({
 Ractive.components["ask-question"] = Ractive.extend({
   template: ` 
   
-        <section style="height:60vh" class="spotlight style3 right">
+        <section id="ask-question-section" style="height:60vh" class="spotlight style3 right">
       		<span class="image fit main bottom"><img
       				src="./assets/custom/photos/other/question-mark-1872665_1280.jpg" alt="" /></span>
       		<div class="content">
@@ -158,7 +174,7 @@ Ractive.components["ask-question"] = Ractive.extend({
 
 Ractive.components["button-back"] = Ractive.extend({
   template: `
-      {{#if 2==2 ||  @global.document.referrer != ""  && @global.document.referrer != @global.location.href  }}   
+      {{#if   @global.document.referrer != ""  && @global.document.referrer != @global.location.href  }}   
 		<a  on-click="@.click(@event)"     style="margin:1rem;{{style}}" class=" btn-back animate__slower button {{classes}} {{isPrimary ? 'primary' : ''}} "> {{label ||  translateFunc('general' ,  15, @global.translationLanguage) }}</a>
     {{/if}}
 `,
@@ -493,7 +509,7 @@ Ractive.components["modal"] = Ractive.extend({
   },
 
   contentClick(event) {
-    event.preventDefault();
+    // event.preventDefault();
     event.stopPropagation();
   },
 
@@ -693,7 +709,7 @@ Ractive.components["footer-c"] = Ractive.extend({
         
 
         
-            <h4 class="textEmblema" style="color: #e44c65"  onclick="window.open('https://www.google.com/maps/place/Norberta+Barlickiego+11,+44-100+Gliwice/@50.297285,18.6539295,14.6z/data=!4m6!3m5!1s0x471130567971af3d:0xa25b51d64f85e287!8m2!3d50.2978397!4d18.6723392!16s%2Fg%2F11c1zdgs4w?entry=ttu');"  style="border-bottom: none;"  style="padding-left:20px">
+            <h4 class="textEmblema"   onclick="window.open('https://www.google.com/maps/place/Norberta+Barlickiego+11,+44-100+Gliwice/@50.297285,18.6539295,14.6z/data=!4m6!3m5!1s0x471130567971af3d:0xa25b51d64f85e287!8m2!3d50.2978397!4d18.6723392!16s%2Fg%2F11c1zdgs4w?entry=ttu');"  style="border-bottom: none;"  style="padding-left:20px">
             Gliwice, Norberta Barlickiego 11 
           </h4>
         </div>
@@ -709,7 +725,7 @@ Ractive.components["footer-c"] = Ractive.extend({
 
         <div class="col-4 col-12-medium">
                 <h4 class="textEmblema" >
-    <span  onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&to=enjoy@epil.com&tf=cm');"    style="color: #e44c65">Email : enjoy@epil.com </span> <br />     <span style="color: #e44c65" onclick="window.open('tel:+48792437583');"> Tel : +48 888 777 333 </span></h4>
+    <span  onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&to=enjoy@epil.com&tf=cm');"    >Email : enjoy@epil.com </span> <br />     <span  onclick="window.open('tel:+48792437583');"> Tel : +48 792 437 583 </span></h4>
         </div>
       </div>
 
@@ -779,22 +795,22 @@ Ractive.components["footer-c"] = Ractive.extend({
 
 Ractive.components["brands-c"] = Ractive.extend({
   template: `      <li>
-        <a   target="_blank" href="{{@this.generateInstagram()}}"  class="icon brands  fa-instagram">
+        <a target="_blank" href="{{@this.generateInstagram()}}"  class="icon brands  fa-instagram">
           <span class="label"></span>
         </a>
       </li>
       <li>
-        <a   target="_blank" href="{{@this.generateFacebook()}}" class="icon brands  fa-facebook-f">
+        <a target="_blank" href="{{@this.generateFacebook()}}" class="icon brands  fa-facebook-f">
           <span class="label"></span>
         </a>
       </li>
       <li>
-        <a  target="_blank" href="{{@this.generateTelegram()}}"  class="icon brands  fa-telegram">
+        <a target="_blank" href="{{@this.generateTelegram()}}"  class="icon brands  fa-telegram">
           <span class="label"></span>
         </a>
       </li>
       <li>
-        <a  target="_blank" href="{{@this.generateWhatsapp()}}" class="icon brands  fa-whatsapp">
+        <a target="_blank" href="{{@this.generateWhatsapp()}}" class="icon brands  fa-whatsapp">
           <span class="label"></span>
         </a>
       </li> `,
@@ -813,18 +829,18 @@ Ractive.components["brands-c"] = Ractive.extend({
   },
   generateFacebook() {
     // Specify the Facebook username or user ID (or use the full profile URL)
-    var usernameOrUserId = "facebookusername"; // Replace with the actual Facebook username or user ID
+    var usernameOrUserId = "Enjoy-epil"; // Replace with the actual Facebook username or user ID
 
     // Generate the Facebook link
     var facebookLink = "https://www.facebook.com/" + usernameOrUserId;
 
     // Redirect to Facebook
-    return facebookLink;
+    return "https://www.facebook.com/profile.php?id=100095564582379&mibextid=LQQJ4d&rdid=dhzessNFmQcpjGhr&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FsvzFshxJ67h8eZ7x%2F%3Fmibextid%3DLQQJ4d";
   },
 
   generateTelegram() {
     // Specify the username or phone number (with country code) and message (optional)
-    var usernameOrPhone = "+48792437583"; // Replace with the actual username or phone number
+    var usernameOrPhone = "+380 67 326 57 53"; // Replace with the actual username or phone number
     var message = "";
 
     // Generate the Telegram link
@@ -850,8 +866,6 @@ Ractive.components["brands-c"] = Ractive.extend({
 
 Ractive.components["nav-touch-c"] = Ractive.extend({
   template: `
-
- 
   <div  id="titleBar">
   <!-- <a href="#" class="toggle"></a> -->
    <div on-click="@.clickToogle(@event)"   style="position:absolute;left:10px;top:5px" > <i class="textEmblema" style="font-size: 2rem" class="fas fa-bars"></i>  </div>
@@ -884,9 +898,9 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
   
    <hr style="margin :1rem 0"/>
     <h4 class="textEmblema" >
-    <span  onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&to=enjoy@epil.com&tf=cm');"    style="color: #e44c65">Email : enjoy@epil.com </span> <br />     <span style="color: #e44c65" onclick="window.open('tel:+48792437583');"> Tel : +48 888 777 333 </span></h4>
+    <span  onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&to=enjoy@epil.com&tf=cm');"    >Email : enjoy@epil.com </span> <br />     <span  onclick="window.open('tel:+48792437583');"> Tel : +48 888 777 333 </span></h4>
 
-  <h4 class="textEmblema" style="color: #e44c65"  onclick="window.open('https://www.google.com/maps/place/Norberta+Barlickiego+11,+44-100+Gliwice/@50.297285,18.6539295,14.6z/data=!4m6!3m5!1s0x471130567971af3d:0xa25b51d64f85e287!8m2!3d50.2978397!4d18.6723392!16s%2Fg%2F11c1zdgs4w?entry=ttu');"  style="border-bottom: none;"  >
+  <h4 class="textEmblema"   onclick="window.open('https://www.google.com/maps/place/Norberta+Barlickiego+11,+44-100+Gliwice/@50.297285,18.6539295,14.6z/data=!4m6!3m5!1s0x471130567971af3d:0xa25b51d64f85e287!8m2!3d50.2978397!4d18.6723392!16s%2Fg%2F11c1zdgs4w?entry=ttu');"  style="border-bottom: none;"  >
     Gliwice, Norberta Barlickiego 11 
   </h4>
    <nav style="    overflow-y: scroll;
@@ -932,7 +946,7 @@ Ractive.components["nav-touch-c"] = Ractive.extend({
      </a>
      <a
        class="link depth-0"
-       href="production.html"
+       href="products.html"
        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
        <span class="indent-0"></span>{{translateFunc('general' ,  0, @global.translationLanguage)}}
      </a>
@@ -1150,9 +1164,9 @@ Ractive.components["header-c"] = Ractive.extend({
     align-items: center;
   " >
   <h4 class="textEmblema" >
-    <span  onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&to=enjoy@epil.com&tf=cm');"    style="color: #e44c65">Email : enjoy@epil.com </span> <br />     <span style="color: #e44c65" onclick="window.open('tel:+48792437583');"> Tel : +48 888 777 333 </span></h4>
+    <span  onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&to=enjoy@epil.com&tf=cm');"    >Email : enjoy@epil.com </span> <br />     <span  onclick="window.open('tel:+48792437583');"> Tel : +48 888 777 333 </span></h4>
 
-  <h4 class="textEmblema" style="color: #e44c65"  onclick="window.open('https://www.google.com/maps/place/Norberta+Barlickiego+11,+44-100+Gliwice/@50.297285,18.6539295,14.6z/data=!4m6!3m5!1s0x471130567971af3d:0xa25b51d64f85e287!8m2!3d50.2978397!4d18.6723392!16s%2Fg%2F11c1zdgs4w?entry=ttu');"  style="border-bottom: none;"  style="padding-left:20px">
+  <h4 class="textEmblema"   onclick="window.open('https://www.google.com/maps/place/Norberta+Barlickiego+11,+44-100+Gliwice/@50.297285,18.6539295,14.6z/data=!4m6!3m5!1s0x471130567971af3d:0xa25b51d64f85e287!8m2!3d50.2978397!4d18.6723392!16s%2Fg%2F11c1zdgs4w?entry=ttu');"  style="border-bottom: none;"  style="padding-left:20px">
     Gliwice, Norberta Barlickiego 11 
   </h4>
   </div>
@@ -1163,7 +1177,7 @@ Ractive.components["header-c"] = Ractive.extend({
       <brands-c/>
 
       <li>
-        <a href="production.html"> {{translateFunc('general' ,  0, @global.translationLanguage)}}</a>
+        <a href="products.html"> {{translateFunc('general' ,  0, @global.translationLanguage)}}</a>
       </li>
       <li>
         <a>{{translateFunc('general' , 11, @global.translationLanguage)}}</a>
